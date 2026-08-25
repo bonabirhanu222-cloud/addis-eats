@@ -1,0 +1,32 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.card {
+    border: 1px solid #412525;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #412525;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.welcome-message {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 10px;
+    color: #725e5e;
+}
