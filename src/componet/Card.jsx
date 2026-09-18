@@ -1,12 +1,11 @@
 import React from 'react'
 
-function Card(props) {
+function Card({children}) {
   return (
-    <div className="card">
-      <h2>{props.name}</h2>
-      <p> {props.price}</p>
+    <div>
+      {children}
     </div>
   )
 }
 
-export default Card;
+export default Card
