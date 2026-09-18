@@ -1,14 +1,17 @@
-import Footer from './componet/Footer';
-import Header from './componet/Header';
-import Main from './componet/Main';
-
-import './css/style.css';
+import Footer from "./componet/Footer";
+import Header from "./componet/Header";
+import Menu from "./Menu";
+import "./css/style.css";
 
 function App() {
   return (
     <div>
       <Header />
-      <Main />
+
+      <main>
+        <Menu />
+      </main>
+
       <Footer />
     </div>
   );

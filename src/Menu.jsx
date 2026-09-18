@@ -1,17 +1,22 @@
 import { useState } from "react";
-import Dish from "./Dish";
-import Card from "./Card";
+import Dish from "./componet/Dish";
+import Card from "./componet/Card";
 import CategoryBar from "./CategoryBar";
-import menu from "./data";
-
+import menu from "./componet/data";
 function Menu() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const [orderTotal, setOrderTotal] = useState(0);
 
   const categories = [
     "All",
     "main course",
     "side dish",
   ];
+
+  function handleAdd(price) {
+    setOrderTotal((currentTotal) => currentTotal + price);
+  }
 
   const filteredMenu =
     selectedCategory === "All"
@@ -30,6 +35,8 @@ function Menu() {
         />
 
         <p>No dishes found in this category.</p>
+
+        <h2>Order Total: {orderTotal} ETB</h2>
       </div>
     );
   }
@@ -49,11 +56,13 @@ function Menu() {
               name={dish.name}
               price={dish.price}
               spicy={dish.spicy}
-              onAdd={() => {}}
+              onAdd={handleAdd}
             />
           </Card>
         ))}
       </div>
+
+      <h2>Order Total: {orderTotal} ETB</h2>
     </div>
   );
 }
